@@ -6,4 +6,4 @@ const App = ()=>{
     );
 }
 
-export deafult App;
+export default App;
