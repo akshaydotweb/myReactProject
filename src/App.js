@@ -6,13 +6,12 @@ import { useState } from "react";
 // edf87b2a 
 
 const API_URL = 'http://www.omdbapi.com?apikey=edf87b2a';
-
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setsearchTerm] = useState('');
 
   const searchMovies = async (title) => {
-    const response = await fetch(`${API_URL}&s=${title} `);
+    const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json();
     setMovies(data.Search);
   };
